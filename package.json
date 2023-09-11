@@ -2,16 +2,7 @@
   "name": "@probot-ng/octokit-auth-probot-ng",
   "version": "0.0.0-development",
   "description": "Octokit authentication strategy that supports token, app (JWT), and event-based installation authentication",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
+  "main": "index.js",
   "scripts": {
     "build": "pika build",
     "lint": "prettier --check '{src,test}/**/*.{ts,md}' *.md *.json",
