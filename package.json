@@ -1,8 +1,17 @@
 {
-  "name": "octokit-auth-probot",
+  "name": "@probot-ng/octokit-auth-probot-ng",
   "version": "0.0.0-development",
   "description": "Octokit authentication strategy that supports token, app (JWT), and event-based installation authentication",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "pika build",
     "lint": "prettier --check '{src,test}/**/*.{ts,md}' *.md *.json",
@@ -17,29 +26,30 @@
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "ISC",
   "dependencies": {
-    "@octokit/auth-app": "^4.0.2",
-    "@octokit/auth-token": "^3.0.0",
-    "@octokit/auth-unauthenticated": "^3.0.0",
-    "@octokit/types": "^8.0.0"
+    "@octokit/auth-app": "^6.0.0",
+    "@octokit/auth-token": "^4.0.0",
+    "@octokit/auth-unauthenticated": "^5.0.0",
+    "@octokit/types": "^11.1.0"
   },
   "peerDependencies": {
     "@octokit/core": ">=3.2"
   },
   "devDependencies": {
-    "@octokit/core": "^4.0.2",
-    "@octokit/tsconfig": "^1.0.1",
+    "@octokit/core": "^5.0.0",
+    "@octokit/tsconfig": "^2.0.0",
     "@pika/pack": "^0.5.0",
-    "@pika/plugin-build-node": "^0.9.0",
-    "@pika/plugin-build-web": "^0.9.0",
-    "@pika/plugin-ts-standard-pkg": "^0.9.0",
-    "@types/jest": "^29.0.0",
-    "fetch-mock": "^9.0.0",
-    "jest": "^29.0.0",
-    "mockdate": "^3.0.2",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
+    "@types/jest": "^29.5.4",
+    "@types/node": "^20.6.0",
+    "fetch-mock": "^9.11.0",
+    "jest": "^29.6.4",
+    "mockdate": "^3.0.5",
     "node-fetch": "^2.6.7",
-    "prettier": "^2.0.4",
-    "ts-jest": "^29.0.0",
-    "typescript": "^4.0.5"
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
   },
   "@pika/pack": {
     "pipeline": [

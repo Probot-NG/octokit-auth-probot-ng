@@ -2,6 +2,7 @@
   "extends": "@octokit/tsconfig",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": false
   }
 }

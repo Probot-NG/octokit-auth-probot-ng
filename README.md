@@ -1,11 +1,11 @@
-# octokit-auth-probot
+# @probot-ng/@probot-ng/octokit-auth-probot-ng-ng
 
 > Octokit authentication strategy that supports token, app (JWT), and event-based installation authentication
 
-[![@latest](https://img.shields.io/npm/v/octokit-auth-probot.svg)](https://www.npmjs.com/package/octokit-auth-probot)
-[![Build Status](https://github.com/probot/octokit-auth-probot/workflows/Test/badge.svg)](https://github.com/probot/octokit-auth-probot/actions?query=workflow%3ATest)
+[![@latest](https://img.shields.io/npm/v/@probot-ng/octokit-auth-probot-ng.svg)](https://www.npmjs.com/package/@probot-ng/octokit-auth-probot-ng)
+[![Build Status](https://github.com/probot/@probot-ng/octokit-auth-probot-ng/workflows/Test/badge.svg)](https://github.com/probot/@probot-ng/octokit-auth-probot-ng/actions?query=workflow%3ATest)
 
-`octokit-auth-probot` combines the authentication strategies:
+`@probot-ng/octokit-auth-probot-ng` combines the authentication strategies:
 
 1. [`@octokit/auth-app`](https://github.com/octokit/auth-app.js#readme)
 2. [`@octokit/auth-token`](https://github.com/octokit/auth-token.js#readme)
@@ -13,7 +13,7 @@
 
 It adds a new authentication type: `"event-octokit"`, which allows to retrieve an Octokit instance which is correctly authenticated based on the Octokit constructors authentication (`app` or `token`) as well as the event, which either results in an installation access token authentication or, in case the event implies that the installation's access has been revoked, in an unauthenticated Octokit instance.
 
-`octokit-auth-probot` is not meant to be used by itself, but in conjuction with [`@octokit/core`](https://github.com/octokit/core.js#readme) or a compatible library.
+`@probot-ng/octokit-auth-probot-ng` is not meant to be used by itself, but in conjuction with [`@octokit/core`](https://github.com/octokit/core.js#readme) or a compatible library.
 
 ## Usage
 
@@ -23,12 +23,12 @@ It adds a new authentication type: `"event-octokit"`, which allows to retrieve a
 Browsers
 </th><td width=100%>
 
-Load `octokit-auth-probot` directly from [cdn.pika.dev](https://cdn.pika.dev)
+Load `@probot-ng/octokit-auth-probot-ng` directly from [cdn.pika.dev](https://cdn.pika.dev)
 
 ```html
 <script type="module">
   import { Octokit } from "https://cdn.pika.dev/@octokit/core";
-  import { createProbotAuth } from "https://cdn.pika.dev/octokit-auth-probot";
+  import { createProbotAuth } from "https://cdn.pika.dev/@probot-ng/octokit-auth-probot-ng";
 </script>
 ```
 
@@ -37,14 +37,14 @@ Load `octokit-auth-probot` directly from [cdn.pika.dev](https://cdn.pika.dev)
 Node
 </th><td>
 
-Install with <code>npm install octokit-auth-probot</code>
+Install with <code>npm install @probot-ng/octokit-auth-probot-ng</code>
 
 ```js
 const { Octokit } = require("@octokit/core");
-const { createProbotAuth } = require("octokit-auth-probot");
+const { createProbotAuth } = require("@probot-ng/octokit-auth-probot-ng");
 // or:
 // import { Octokit } from "@octokit/core";
-// import { createProbotAuth } from "octokit-auth-probot";
+// import { createProbotAuth } from "@probot-ng/octokit-auth-probot-ng";
 ```
 
 </td></tr>
@@ -64,7 +64,7 @@ No conversion is needed in Node, both `PKCS#1` and `PKCS#8` format will work.
 
 ```js
 const { Octokit } = require("@octokit/core");
-const { createProbotAuth } = require("octokit-auth-probot");
+const { createProbotAuth } = require("@probot-ng/octokit-auth-probot-ng");
 
 const ProbotOctokit = Octokit.defaults({
   authStrategy: createProbotAuth,
