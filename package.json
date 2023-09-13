@@ -23,7 +23,7 @@
     "@octokit/types": "^11.1.0"
   },
   "peerDependencies": {
-    "@octokit/core": ">=3.2"
+    "@octokit/core": ">=5.0"
   },
   "devDependencies": {
     "@octokit/core": "^5.0.0",
